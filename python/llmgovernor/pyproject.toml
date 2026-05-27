@@ -11,3 +11,10 @@ authors = [{name = "Vivekreddy99"}]
 license = {text = "MIT"}
 requires-python = ">=3.11"
 dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["llmgovernor"]
+
+[tool.hatch.build]
+packages = ["llmgovernor"]
+include = ["py.typed"]

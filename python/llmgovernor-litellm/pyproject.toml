@@ -10,4 +10,23 @@ readme = "README.md"
 authors = [{name = "Vivekreddy99"}]
 license = {text = "MIT"}
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+]
+
+[project.optional-dependencies]
+litellm = [
+  "litellm>=1.37.8,<2",
+  "llmgovernor>=0.1.0",
+]
+
+dev = [
+  "pytest",
+  "pytest-anyio",
+  "anyio",
+  "litellm>=1.37.8,<2",
+  "llmgovernor>=0.1.0",
+]
+
+[tool.hatch.build]
+packages = ["llmgovernor_litellm"]
+include = ["py.typed"]
