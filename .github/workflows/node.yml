@@ -1,0 +1,10 @@
+name: node
+
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Node
+        run: echo "Hello from node workflow"

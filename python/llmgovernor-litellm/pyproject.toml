@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llmgovernor-litellm"
+version = "0.1.0"
+description = "LLMGovernor LiteLLM integration"
+readme = "README.md"
+authors = [{name = "Vivekreddy99"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = []

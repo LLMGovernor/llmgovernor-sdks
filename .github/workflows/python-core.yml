@@ -1,0 +1,10 @@
+name: python-core
+
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Python
+        run: echo "Hello from python-core workflow"
