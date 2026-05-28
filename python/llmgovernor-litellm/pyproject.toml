@@ -4,7 +4,7 @@
 
         [project]
         name = "llmgovernor-litellm"
-        version = "0.1.0"
+        version = "0.1.1"
         description = "[DEPRECATED — use llmgovernor[litellm]] LiteLLM callback for LLMGovernor"
         readme = "README.md"
         authors = [{name = "EarlyBright Global LLC", email = "vivek@earlybrightglobal.com"}]
