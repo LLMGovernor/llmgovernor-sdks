@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llmgovernor-helicone"
+version = "0.1.0"
+description = "Mirror Helicone traces into LLMGovernor's anomaly engine"
+readme = "README.md"
+authors = [{name = "EarlyBright Global LLC", email = "vivek@earlybrightglobal.com"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+keywords = ["llm", "helicone", "anomaly", "observability", "llmgovernor"]
+dependencies = [
+  "httpx>=0.27",
+  "llmgovernor>=0.1.0",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+  "Topic :: System :: Monitoring",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-anyio", "anyio", "build", "twine"]
+
+[project.urls]
+Homepage = "https://llmgovernor.ai"
+Documentation = "https://llmgovernor.ai/docs"
+Repository = "https://github.com/LLMGovernor/llmgovernor-sdks"
+Issues = "https://github.com/LLMGovernor/llmgovernor-sdks/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["llmgovernor_helicone"]
+
+[tool.hatch.build]
+packages = ["llmgovernor_helicone"]
+include = ["py.typed"]

@@ -1,20 +1,51 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
 
-[project]
-name = "llmgovernor-otel"
-version = "0.1.0"
-description = "LLMGovernor OpenTelemetry integration"
-readme = "README.md"
-authors = [{name = "Vivekreddy99"}]
-license = {text = "MIT"}
-requires-python = ">=3.11"
-dependencies = []
+        [project]
+        name = "llmgovernor-otel"
+        version = "0.1.0"
+        description = "OpenTelemetry span exporter for LLMGovernor"
+        readme = "README.md"
+        authors = [{name = "EarlyBright Global LLC", email = "vivek@earlybrightglobal.com"}]
+        license = {text = "Apache-2.0"}
+        requires-python = ">=3.10"
+        keywords = ["llm", "observability", "cost", "anomaly", "openai", "anthropic", "litellm", "monitoring"]
+        dependencies = []
+        classifiers = [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: Apache Software License",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Operating System :: OS Independent",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "Topic :: System :: Monitoring",
+        ]
+        [project.optional-dependencies]
+otel = [
+  "opentelemetry-api>=1.20",
+  "opentelemetry-sdk>=1.20",
+  "llmgovernor>=0.1.0",
+]
+dev = ["pytest", "pytest-anyio", "anyio", "build", "twine"]
 
-[tool.hatch.build.targets.wheel]
-packages = ["llmgovernor_otel"]
 
-[tool.hatch.build]
-packages = ["llmgovernor_otel"]
-include = ["py.typed"]
+        [project.urls]
+        Homepage = "https://llmgovernor.ai"
+        Documentation = "https://llmgovernor.ai/docs"
+        Repository = "https://github.com/LLMGovernor/llmgovernor-sdks"
+        Issues = "https://github.com/LLMGovernor/llmgovernor-sdks/issues"
+        Changelog = "https://github.com/LLMGovernor/llmgovernor-sdks/releases"
+
+        [tool.hatch.build.targets.wheel]
+        packages = ["llmgovernor_otel"]
+
+        [tool.hatch.build]
+        packages = ["llmgovernor_otel"]
+        include = ["py.typed"]

@@ -1,20 +1,47 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
 
-[project]
-name = "llmgovernor"
-version = "0.1.0"
-description = "LLMGovernor core SDK"
-readme = "README.md"
-authors = [{name = "Vivekreddy99"}]
-license = {text = "MIT"}
-requires-python = ">=3.11"
-dependencies = []
+        [project]
+        name = "llmgovernor"
+        version = "0.3.0a0"
+        description = "LLMGovernor — anomaly engine for LLM apps (core SDK with optional LiteLLM bundle)"
+        readme = "README.md"
+        authors = [{name = "EarlyBright Global LLC", email = "vivek@earlybrightglobal.com"}]
+        license = {text = "Apache-2.0"}
+        requires-python = ">=3.10"
+        keywords = ["llm", "observability", "cost", "anomaly", "openai", "anthropic", "litellm", "monitoring"]
+        dependencies = []
+        classifiers = [
+          "Development Status :: 4 - Beta",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: Apache Software License",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Operating System :: OS Independent",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "Topic :: System :: Monitoring",
+        ]
+        [project.optional-dependencies]
+litellm = ["litellm>=1.37.8,<2"]
+dev = ["pytest", "pytest-anyio", "anyio", "build", "twine"]
 
-[tool.hatch.build.targets.wheel]
-packages = ["llmgovernor"]
 
-[tool.hatch.build]
-packages = ["llmgovernor"]
-include = ["py.typed"]
+        [project.urls]
+        Homepage = "https://llmgovernor.ai"
+        Documentation = "https://llmgovernor.ai/docs"
+        Repository = "https://github.com/LLMGovernor/llmgovernor-sdks"
+        Issues = "https://github.com/LLMGovernor/llmgovernor-sdks/issues"
+        Changelog = "https://github.com/LLMGovernor/llmgovernor-sdks/releases"
+
+        [tool.hatch.build.targets.wheel]
+        packages = ["llmgovernor"]
+
+        [tool.hatch.build]
+        packages = ["llmgovernor"]
+        include = ["py.typed"]
