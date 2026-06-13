@@ -5,16 +5,51 @@ build-backend = "hatchling.build"
 [project]
 name = "llmgovernor-otel"
 version = "0.1.0"
-description = "LLMGovernor OpenTelemetry integration"
+description = "OpenTelemetry span processor adapter for the LLMGov Anomaly Engine"
 readme = "README.md"
-authors = [{name = "Vivekreddy99"}]
-license = {text = "MIT"}
+authors = [{name = "EarlyBrightGlobal"}]
+license = {text = "Apache-2.0"}
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+  "llmgovernor>=0.1.0",
+]
+
+[project.optional-dependencies]
+otel = ["opentelemetry-sdk>=1.20.0"]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "responses",
+]
+
+[project.urls]
+Homepage = "https://llmgovernor.ai"
+Repository = "https://github.com/Vivekreddy99/llmgovernor-sdks"
 
 [tool.hatch.build.targets.wheel]
-packages = ["llmgovernor_otel"]
+packages = ["llmgovernor", "llmgovernor_otel"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "llmgovernor/**/*.py",
+  "llmgovernor_otel/**/*.py",
+  "tests/**/*.py",
+  "examples/**/*.py",
+  "py.typed",
+  "README.md",
+  "LICENSE",
+]
 
 [tool.hatch.build]
-packages = ["llmgovernor_otel"]
-include = ["py.typed"]
+exclude = ["**/__pycache__", "**/*.pyc", "dist/"]
+include-package-data = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I"]

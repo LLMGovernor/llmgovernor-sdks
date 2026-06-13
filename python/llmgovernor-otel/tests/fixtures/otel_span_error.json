@@ -1,0 +1,20 @@
+{
+  "name": "anthropic.messages",
+  "context": {
+    "trace_id": "0xdeadbeef12345678",
+    "span_id": "0xabcd1234"
+  },
+  "kind": "CLIENT",
+  "start_time": "2024-01-15T11:00:00.000000Z",
+  "end_time": "2024-01-15T11:00:00.500000Z",
+  "status": {"status_code": "ERROR", "description": "rate_limit_exceeded"},
+  "attributes": {
+    "gen_ai.system": "anthropic",
+    "gen_ai.request.model": "claude-3-5-sonnet-20241022",
+    "gen_ai.usage.input_tokens": 0,
+    "gen_ai.usage.output_tokens": 0,
+    "llmgovernor.agent": "batch-processor",
+    "service.name": "worker"
+  },
+  "events": []
+}

@@ -1,0 +1,17 @@
+{
+  "name": "GET /api/users",
+  "context": {
+    "trace_id": "0xaabbccdd",
+    "span_id": "0x11223344"
+  },
+  "kind": "SERVER",
+  "start_time": "2024-01-15T10:30:00.000000Z",
+  "end_time": "2024-01-15T10:30:00.012000Z",
+  "status": {"status_code": "OK"},
+  "attributes": {
+    "http.method": "GET",
+    "http.route": "/api/users",
+    "http.status_code": 200
+  },
+  "events": []
+}
