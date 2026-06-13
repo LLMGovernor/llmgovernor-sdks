@@ -1,0 +1,30 @@
+{
+  "request": {
+    "id": "3c90c3cc-0d44-4b50-8888-8dd25736052a",
+    "created_at": "2024-01-15T10:30:00.000Z",
+    "model": "gpt-4o",
+    "path": "/v1/chat/completions",
+    "user_id": "user-abc",
+    "properties": {
+      "Helicone-Property-Agent": "support-bot",
+      "session_id": "sess-xyz",
+      "environment": "production"
+    },
+    "provider": "OPENAI",
+    "country_code": "US",
+    "prompt_id": null,
+    "threat": false
+  },
+  "response": {
+    "created_at": "2024-01-15T10:30:01.234Z",
+    "status": 200,
+    "time_to_first_token": 312
+  },
+  "usage": {
+    "prompt_tokens": 517,
+    "completion_tokens": 183,
+    "total_tokens": 700,
+    "cost": 0.005175,
+    "helicone_cost": 0.000013
+  }
+}
