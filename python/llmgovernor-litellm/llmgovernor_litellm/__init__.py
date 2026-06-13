@@ -1,7 +1,7 @@
 from .callback import LLMGovernorHandler
 
 __all__ = ["LLMGovernorHandler", "register"]
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 
 def register(api_key: str | None = None, endpoint: str | None = None, **kwargs):
